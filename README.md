@@ -23,7 +23,7 @@
 </p>
 
 <h3 align="center"> 
-🚧  Em Desenvolvimento  🚧
+🚧  Finalizado  🚧
 </h3>
 
 ### 📎 Features 
@@ -56,6 +56,9 @@ $ yarn dev
 
 # Executar a aplicação de produção
 $ yarn start
+
+# Verificar documentação
+$ yarn storybook
 ```
 
 ### 🚀 Tecnologias

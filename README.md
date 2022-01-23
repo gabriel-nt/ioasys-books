@@ -23,7 +23,7 @@
 </p>
 
 <h3 align="center"> 
-🚧  Em Desenvolvimento  🚧
+🚧  Finalizado  🚧
 </h3>
 
 ### 📎 Features 

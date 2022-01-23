@@ -19,7 +19,12 @@ const Modal = ({ isOpen, onRequestClose }: ModalProps) => {
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
-      <Button type="button" hover={false} onClick={onRequestClose}>
+      <Button
+        type="button"
+        hover={false}
+        onClick={onRequestClose}
+        aria-label="Fechar modal"
+      >
         <RiCloseFill />
       </Button>
 
@@ -30,6 +35,7 @@ const Modal = ({ isOpen, onRequestClose }: ModalProps) => {
             layout="fixed"
             width={349}
             height={513}
+            alt={'title'}
           />
         </ImageContainer>
         <div>

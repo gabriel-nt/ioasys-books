@@ -34,7 +34,7 @@ const Card = ({
             layout="fixed"
             width={82}
             height={122}
-            className="image"
+            alt={title}
           />
         ) : (
           <Image
@@ -42,6 +42,7 @@ const Card = ({
             layout="fixed"
             width={82}
             height={122}
+            alt={title}
           />
         )}
       </ImageContainer>

@@ -9,6 +9,12 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
   justify-content: space-between;
 
+  h1 {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+
   span {
     font-size: 28px;
     font-weight: 300;

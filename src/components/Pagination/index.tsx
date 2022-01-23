@@ -30,6 +30,7 @@ const Pagination = ({
       <Button
         type="button"
         onClick={handlePrevPage}
+        aria-label="Página anterior"
         disabled={currentPage - 1 === 0}
       >
         <MdOutlineChevronLeft />
@@ -37,6 +38,7 @@ const Pagination = ({
       <Button
         type="button"
         onClick={handleNextPage}
+        aria-label="Próxima página"
         disabled={currentPage + 1 > Math.floor(totalPages)}
       >
         <MdOutlineChevronRight />

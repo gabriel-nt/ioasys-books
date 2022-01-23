@@ -28,10 +28,6 @@ interface Book {
   authors: Array<string>;
 }
 
-interface Pagination {
-  totalPages: number;
-}
-
 const Home: NextPage = () => {
   const router = useRouter();
   const { getRefreshToken, signOut } = useAuth();

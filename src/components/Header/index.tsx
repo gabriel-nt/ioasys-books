@@ -26,12 +26,14 @@ const Header = ({ mode = 'light' }: HeaderProps) => {
         <span>Books</span>
       </div>
 
+      <h1>ioasys Books</h1>
+
       {user && (
         <Profile>
           <p>
             Bem vindo, <strong>{user.name}!</strong>
           </p>
-          <Button onClick={handleSignOut}>
+          <Button onClick={handleSignOut} arial-label="Deslogar">
             <FiLogOut />
           </Button>
         </Profile>

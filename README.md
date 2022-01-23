@@ -56,6 +56,9 @@ $ yarn dev
 
 # Executar a aplicação de produção
 $ yarn start
+
+# Verificar documentação
+$ yarn storybook
 ```
 
 ### 🚀 Tecnologias

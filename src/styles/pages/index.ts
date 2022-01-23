@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
+  background: url('/images/login-background.png') no-repeat center center fixed;
   background-size: cover;
+  -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background: url('/images/login-background.png') no-repeat center center fixed;
 `;
 
 export const Content = styled.div`

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ButtonHTMLAttributes } from 'react';
 
 import {
   Container,
@@ -13,20 +14,21 @@ interface Book {
   id: string;
   imageUrl: string;
   publisher: string;
-  published: string;
-  pageCount: string;
+  published: number;
+  pageCount: number;
   authors: Array<string>;
 }
 
-interface CardProps {
+interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   book: Book;
 }
 
 const Card = ({
   book: { authors, published, title, pageCount, imageUrl, publisher },
+  ...rest
 }: CardProps) => {
   return (
-    <Container>
+    <Container {...rest}>
       <ImageContainer>
         {imageUrl ? (
           <Image

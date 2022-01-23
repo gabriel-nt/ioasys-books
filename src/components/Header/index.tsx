@@ -31,7 +31,7 @@ const Header = ({ mode = 'light' }: HeaderProps) => {
       {user && (
         <Profile>
           <p>
-            Bem vindo, <strong>{user.name}!</strong>
+            Bem vindo(a), <strong>{user.name}!</strong>
           </p>
           <Button onClick={handleSignOut} arial-label="Deslogar">
             <FiLogOut />

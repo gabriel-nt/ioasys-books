@@ -6,8 +6,8 @@ export const Container = styled.div`
   border-radius: 50%;
   display: inline-block;
   animation: 1s 0.2s spin infinite;
-  border-top-color: rgba(3, 3, 3, 0.1);
   border: 4px solid ${({ theme }) => theme.colors.dark};
+  border-top-color: rgba(3, 3, 3, 0.1);
 
   @-moz-keyframes spin {
     from {

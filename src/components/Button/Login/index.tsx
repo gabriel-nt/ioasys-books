@@ -4,12 +4,12 @@ import { Container } from './styles';
 
 interface ButtonLoginProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
-  isLoading: boolean;
+  isDisabled: boolean;
 }
 
-const ButtonLogin = ({ label, isLoading, ...rest }: ButtonLoginProps) => {
+const ButtonLogin = ({ label, isDisabled, ...rest }: ButtonLoginProps) => {
   return (
-    <Container disabled={isLoading} {...rest}>
+    <Container disabled={isDisabled} {...rest}>
       <span>{label}</span>
     </Container>
   );

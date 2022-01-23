@@ -23,8 +23,8 @@ interface Book {
   id: string;
   imageUrl: string;
   publisher: string;
-  published: string;
-  pageCount: string;
+  published: number;
+  pageCount: number;
   authors: Array<string>;
 }
 
@@ -35,7 +35,8 @@ const Home: NextPage = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const [currentBookId, setCurrentBookId] = useState('');
   const [books, setBooks] = useState<Array<Book>>([]);
 
   useEffect(() => {
@@ -74,6 +75,13 @@ const Home: NextPage = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const handleOpenModal = (id: string) => {
+    setShowModal(true);
+    setCurrentBookId(id);
+    document.body.style.overflow = 'hidden';
   };
 
   return (
@@ -88,7 +96,11 @@ const Home: NextPage = () => {
           ) : (
             <CardsContainer>
               {books.map(book => (
-                <Card key={book.id} book={book} />
+                <Card
+                  key={book.id}
+                  book={book}
+                  onClick={() => handleOpenModal(book.id)}
+                />
               ))}
             </CardsContainer>
           )}
@@ -100,7 +112,11 @@ const Home: NextPage = () => {
           />
         </Content>
       </Container>
-      <Modal isOpen={showModal} onRequestClose={handleCloseModal} />
+      <Modal
+        idBook={currentBookId}
+        isOpen={showModal}
+        onRequestClose={handleCloseModal}
+      />
     </>
   );
 };

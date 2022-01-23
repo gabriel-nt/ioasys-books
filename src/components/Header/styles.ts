@@ -10,9 +10,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: space-between;
 
   h1 {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
+    display: none;
   }
 
   span {

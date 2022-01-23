@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.button`
   display: flex;
   padding: 16px;
   min-width: 272px;
   border-radius: 4px;
   position: relative;
-  align-items: center;
+  text-align: left;
   transition: all 0.2s;
-  box-shadow: 0px 6px 24xpx rgba(84, 16, 95, 0.13);
+  outline: none;
+  border: none;
+  box-shadow: 0px 6px 24px rgba(84, 16, 95, 0.13);
   background-color: ${({ theme }) => theme.colors.white};
 
   > .content {

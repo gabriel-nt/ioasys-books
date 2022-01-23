@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   children,
-  hover,
+  hover = true,
   disabled = false,
   ...rest
 }: ButtonProps) => {

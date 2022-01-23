@@ -2,10 +2,10 @@ import { Container } from './styles';
 
 interface ItemDetailPros {
   title: string;
-  label: string;
+  label: string | number;
 }
 
-export const ItemDetail = ({ title, label }: ItemDetailPros) => {
+const ItemDetail = ({ title, label }: ItemDetailPros) => {
   return (
     <Container>
       <span>{title}</span>
@@ -13,3 +13,5 @@ export const ItemDetail = ({ title, label }: ItemDetailPros) => {
     </Container>
   );
 };
+
+export default ItemDetail;

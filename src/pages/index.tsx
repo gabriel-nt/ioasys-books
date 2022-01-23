@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const [isVisibleMessageError, setIsVisibleMessageError] =
     useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState(
-    'Email e/ou senha incorretos.'
+    'Email e/ou senha incorretos.',
   );
 
   const loginSchema = yup.object({
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
     props: FormikProps<{
       email: string;
       password: string;
-    }>
+    }>,
   ) => {
     setIsVisibleMessageError(true);
     props.errors.email && setErrorMessage(props.errors.email);
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
                     props.handleSubmit();
                   }
                 }}
-                isLoading={props.isSubmitting}
+                isDisabled={props.isSubmitting}
               />
 
               <Tooltip label={errorMessage} isVisible={isVisibleMessageError} />

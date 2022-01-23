@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  margin: 16px 0;
+  padding: 16px 0;
   align-items: center;
   justify-content: center;
 
@@ -22,7 +22,6 @@ export const Container = styled.div`
 
     &:last-child {
       order: 3;
-      margin-right: 8px;
     }
   }
 
@@ -38,6 +37,10 @@ export const Container = styled.div`
     button {
       &:not(:last-child) {
         order: 1;
+      }
+
+      &:last-child {
+        margin-right: 8px;
       }
 
       & + button {

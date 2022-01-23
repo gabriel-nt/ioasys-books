@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled(ReactModal)`
   width: 100%;
   padding: 48px;
+  padding-right: 0;
   outline: none;
   max-width: 769px;
   overflow: auto;
@@ -45,12 +46,38 @@ export const Container = styled(ReactModal)`
   }
 `;
 
+export const LoaderContainer = styled.div`
+  height: 100%;
+  min-height: 513px;
+  padding-right: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    & {
+      padding-right: 0;
+    }
+  }
+`;
+
 export const ImageContainer = styled.div`
+  display: flex;
   min-width: 349px;
   min-height: 513px;
   margin-right: 48px;
-  position: relative;
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
+
+  span {
+  }
+
+  @media screen and (max-width: 468px) {
+    & {
+      min-width: 240px;
+      min-height: 351px;
+    }
+  }
 
   @media screen and (max-width: 768px) {
     & {
@@ -64,46 +91,16 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
 
-  > div {
-    display: flex;
-    flex-direction: column;
-
-    > h2,
-    > span {
-      overflow: hidden;
-      display: -webkit-box;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-    }
-
-    > h2 {
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 40px;
-      -webkit-line-clamp: 2;
-      color: ${({ theme }) => theme.colors.gray};
-    }
-
-    > span {
-      font-size: 12px;
-      line-height: 20px;
-      margin-bottom: 32px;
-      font-weight: normal;
-      -webkit-line-clamp: 1;
-      color: ${({ theme }) => theme.colors.pink45};
-    }
-  }
-
   h3 {
     font-size: 12px;
     font-weight: 500;
     line-height: 20px;
-    color: var(--gray800);
+    color: ${({ theme }) => theme.colors.dark};
     text-transform: uppercase;
   }
 
   .info {
-    margin-bottom: 32px;
+    margin: 32px 0;
 
     h3 {
       margin-bottom: 7px;
@@ -117,16 +114,64 @@ export const Content = styled.div`
   }
 `;
 
+export const DetailsContainer = styled.div`
+  overflow: auto;
+  max-height: 510px;
+  padding-right: 48px;
+
+  h2,
+  span {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  > h2 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    color: ${({ theme }) => theme.colors.dark};
+  }
+
+  > span {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 32px;
+    font-weight: normal;
+    color: ${({ theme }) => theme.colors.pink45};
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background: ${({ theme }) => theme.colors.white};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: ${({ theme }) => theme.colors.pink45};
+    border: 4px solid ${({ theme }) => theme.colors.white};
+  }
+
+  @media screen and (max-width: 768px) {
+    & {
+      padding-right: 0;
+      max-height: initial;
+    }
+  }
+`;
+
 export const Summary = styled.div`
   p {
     font-size: 12px;
     overflow: hidden;
     line-height: 20px;
-    font-weight: normal;
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
     color: ${({ theme }) => theme.colors.gray};
   }
 

@@ -70,7 +70,7 @@ const Home: NextPage = () => {
     async function checkLogin() {
       try {
         await getRefreshToken();
-        router.push('/');
+        router.push('/home');
       } catch (error) {
         signOut();
       }

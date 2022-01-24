@@ -21,7 +21,7 @@ type SignInFormData = {
 const Home: NextPage = () => {
   const router = useRouter();
 
-  const { signIn, signOut, getRefreshToken } = useAuth();
+  const { signIn, user } = useAuth();
   const [isVisibleMessageError, setIsVisibleMessageError] =
     useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState(
@@ -67,17 +67,8 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    async function checkLogin() {
-      try {
-        await getRefreshToken();
-        router.push('/home');
-      } catch (error) {
-        signOut();
-      }
-    }
-
-    checkLogin();
-  }, [getRefreshToken]);
+    user && router.push('/home');
+  }, [user]);
 
   return (
     <Container>

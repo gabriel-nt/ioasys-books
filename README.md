@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="https://github.com/gabriel-nt/ioasys-books/blob/main/public/images/logo.svg" alt="logo" height="70"/>
+  <img src="https://github.com/gabriel-nt/ioasys-books/blob/main/public/images/logo-github.svg" alt="logo" height="60"/>
 </h4>
 
 <h1 align="center">
@@ -34,7 +34,7 @@
 - [x] Persistência de login 
 
 ### 💻 Demonstração
-<!--<img src="https://github.com/gabriel-nt/pokedex/blob/main/src/assets/wallpaper.png" alt="Thumbail"/>-->
+<img src="https://github.com/gabriel-nt/ioasys-books/blob/main/public/images/thumbnail.png" alt="Thumbail"/>
 
 ### ⚙ Pré-requisitos
 
@@ -57,7 +57,7 @@ $ yarn dev
 # Executar a aplicação de produção
 $ yarn start
 
-# Verificar documentação
+# Executar documentação
 $ yarn storybook
 ```
 
@@ -78,6 +78,7 @@ Esse projeto foi utilizou das seguintes lib:
 - react-icons
 - react-modal
 - yup
+- storybook
 - styled-components
 
 ###  📘 Padrão de Código
